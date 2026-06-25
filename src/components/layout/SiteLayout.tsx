@@ -54,8 +54,29 @@ export default function SiteLayout() {
   }, []);
 
   useLayoutEffect(() => {
-    jumpToPageTop();
-  }, [location.pathname]);
+    if (!location.hash) {
+      jumpToPageTop();
+    }
+  }, [location.pathname, location.hash]);
+
+  useEffect(() => {
+    if (!location.hash) {
+      return;
+    }
+
+    window.requestAnimationFrame(() => {
+      const target = document.getElementById(location.hash.slice(1));
+      const headerHeight = document.querySelector(".site-header")?.getBoundingClientRect().height ?? 0;
+
+      if (target) {
+        window.scrollTo({
+          top: target.getBoundingClientRect().top + window.scrollY - headerHeight - 24,
+          left: 0,
+          behavior: "smooth",
+        });
+      }
+    });
+  }, [location.pathname, location.hash]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {

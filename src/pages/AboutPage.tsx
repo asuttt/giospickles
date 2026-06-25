@@ -20,6 +20,6 @@ export default function AboutPage() {
         </div>
       </div>
     </section>
-    <section className="section"><div className="site-container story-grid"><div className="story-paper"><p>“There is no such thing as too many pickles”</p><span>— Probably Gio</span></div><div><p className="eyebrow">Our corner of New Hope</p><h2 className="display-heading">We like things a little quirky around here</h2><p className="large-copy">Gio's is the kind of local place where the stories are real, the wins are celebrated, and the hard days are all part of making something good</p><p className="large-copy">It's a place for a perfect jar, a hearty sandwich, a good laugh, and a little neighborly love</p><Link className="button button-primary" to="/contact">Visit Our New Location</Link></div></div></section>
+    <section className="section"><div className="site-container story-grid"><div className="story-paper"><p>“There is no such thing as too many pickles”</p><span>— Probably Gio</span></div><div><p className="eyebrow">Our corner of New Hope</p><h2 className="display-heading">We like things a little quirky</h2><p className="large-copy">Gio's is the kind of local place where the stories are real, the wins are celebrated, and the hard days are all part of making something good</p><p className="large-copy">It's a place for a perfect jar, a hearty sandwich, a good laugh, and a little neighborly love</p><Link className="button button-primary" to="/contact">Visit Our New Location</Link></div></div></section>
   </>;
 }

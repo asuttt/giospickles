@@ -1,7 +1,7 @@
 export const business = {
   name: "Giovanni's Dillicious Pickles",
   shortName: "Gio's Pickles",
-  address: "1270 South Main Street, New Hope, PA 18938",
+  address: "1270 S Main Street, New Hope, PA 18938",
   phone: "(215) 478-8115",
   email: "giospickles@gmail.com",
   instagram: "https://www.instagram.com/giospickles/?hl=en",
