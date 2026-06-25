@@ -49,7 +49,7 @@ const menuSections = [
   {
     id: "more",
     eyebrow: "Rotating extras",
-    title: "Pizza, Sweets & Swag",
+    title: "Pizza, Sweets, & Swag",
     note: "Availability may rotate as the new location settles in",
     items: [
       ["Pickle Pizza", "A pickle-powered pizza option for the truly committed"],

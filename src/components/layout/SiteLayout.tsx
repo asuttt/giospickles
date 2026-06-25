@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Mail, Phone, X } from "lucide-react";
+import { Facebook, FileText, Instagram, Mail, Phone, X } from "lucide-react";
 import { type DragEvent, type MouseEvent, useEffect, useLayoutEffect, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import logo from "@/assets/PrimaryLogo.png";
@@ -82,6 +82,7 @@ export default function SiteLayout() {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setIsLegalCardOpen(false);
+        setIsMenuOpen(false);
       }
     };
 
@@ -186,6 +187,8 @@ export default function SiteLayout() {
                   {item.label}
                 </NavLink>
               ))}
+              <a className="mobile-nav-order" href="#order" tabIndex={isMenuOpen ? undefined : -1} onClick={() => setIsMenuOpen(false)}>Order Now</a>
+              <a className="mobile-nav-contact" href={`tel:${business.phone.replace(/\D/g, "")}`} tabIndex={isMenuOpen ? undefined : -1}>{business.phone}</a>
             </div>
           </div>
         </nav>
@@ -197,7 +200,7 @@ export default function SiteLayout() {
 
       <footer className="site-footer">
         <div className="site-container footer-inner">
-          <div className="footer-legal"><button className="privacy-trigger" type="button" onClick={() => setIsLegalCardOpen(true)}>Privacy &amp; Terms</button><div className="footer-legal-copy"><p className="footer-copy">&copy; {currentYear} Giovanni's DILLicious Pickles, Inc.</p><p className="footer-copy">Designed and deployed by <a className="footer-link footer-credit-link" href="https://tryshipyard.vercel.app" target="_blank" rel="noreferrer">Arseni Sutton</a></p></div></div>
+          <div className="footer-legal"><button className="privacy-trigger" type="button" onClick={() => setIsLegalCardOpen(true)}><FileText aria-hidden="true" /><span className="link-label">Privacy &amp; Terms</span></button><div className="footer-legal-copy"><p className="footer-copy">&copy; {currentYear} Giovanni's DILLicious Pickles, Inc.</p><p className="footer-copy">Designed and deployed by <a className="footer-link footer-credit-link" href="https://tryshipyard.vercel.app" target="_blank" rel="noreferrer">Arseni Sutton</a></p></div></div>
           <Link className="footer-logo-link" to="/" aria-label={`${business.name} home`}><img className="footer-logo" src={logo} alt="" /></Link>
           <div className="footer-contact">
             <a className="footer-link footer-contact-link" href={`tel:${business.phone.replace(/\D/g, "")}`}>
