@@ -134,7 +134,7 @@ export default function ServicesPage() {
         <div className="site-container menu-order-grid">
           <div className="menu-order-heading">
             <p className="eyebrow">Coming soon</p>
-            <h2>Online ordering, jars, & gear</h2>
+            <h2>Online orders, jars, & gear</h2>
           </div>
           <div className="menu-order-copy">
             <p>

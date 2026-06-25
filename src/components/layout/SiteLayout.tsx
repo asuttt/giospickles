@@ -200,9 +200,11 @@ export default function SiteLayout() {
 
       <footer className="site-footer">
         <div className="site-container footer-inner">
-          <div className="footer-legal"><button className="privacy-trigger" type="button" onClick={() => setIsLegalCardOpen(true)}><FileText aria-hidden="true" /><span className="link-label">Privacy &amp; Terms</span></button><div className="footer-legal-copy"><p className="footer-copy">&copy; {currentYear} Giovanni's DILLicious Pickles, Inc.</p><p className="footer-copy">Designed and deployed by <a className="footer-link footer-credit-link" href="https://tryshipyard.vercel.app" target="_blank" rel="noreferrer">Arseni Sutton</a></p></div></div>
-          <Link className="footer-logo-link" to="/" aria-label={`${business.name} home`}><img className="footer-logo" src={logo} alt="" /></Link>
           <div className="footer-contact">
+            <button className="privacy-trigger" type="button" onClick={() => setIsLegalCardOpen(true)}>
+              <FileText aria-hidden="true" />
+              <span className="link-label">Privacy &amp; Terms</span>
+            </button>
             <a className="footer-link footer-contact-link" href={`tel:${business.phone.replace(/\D/g, "")}`}>
               <Phone aria-hidden="true" />
               <span className="link-label">{business.phone}</span>
@@ -211,8 +213,10 @@ export default function SiteLayout() {
               <Mail aria-hidden="true" />
               <span className="link-label">{business.email}</span>
             </a>
-            <span className="social-links"><a href={business.instagram} target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram /></a><a href={business.facebook} target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook /></a></span>
           </div>
+          <span className="social-links"><a href={business.instagram} target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram /></a><a href={business.facebook} target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook /></a></span>
+          <Link className="footer-logo-link" to="/" aria-label={`${business.name} home`}><img className="footer-logo" src={logo} alt="" /></Link>
+          <div className="footer-legal"><div className="footer-legal-copy"><p className="footer-copy">&copy; {currentYear} Giovanni's DILLicious Pickles, Inc.</p><p className="footer-copy">Designed and deployed by <a className="footer-link footer-credit-link" href="https://tryshipyard.vercel.app" target="_blank" rel="noreferrer">Arseni Sutton</a></p></div></div>
         </div>
       </footer>
       {isLegalCardOpen ? <div className="legal-dialog-backdrop" role="presentation" onMouseDown={() => setIsLegalCardOpen(false)}><section className="legal-dialog" role="dialog" aria-modal="true" aria-labelledby="legal-dialog-title" onMouseDown={(event) => event.stopPropagation()}><button className="legal-dialog-close" type="button" aria-label="Close privacy and terms" onClick={() => setIsLegalCardOpen(false)}><X /></button><p className="eyebrow">Giovanni's Dillicious Pickles</p><h2 id="legal-dialog-title">Privacy &amp; Terms</h2><p>Legal language is being prepared and will appear here before the public site launches</p><p className="legal-dialog-note">For questions in the meantime, please contact us at <a href={`mailto:${business.email}`}>{business.email}</a></p></section></div> : null}
