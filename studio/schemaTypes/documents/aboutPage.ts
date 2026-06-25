@@ -10,7 +10,7 @@ export const aboutPage = defineType({
   fields: [
     defineField({ name: "hero", title: "Hero", type: "heroSection" }),
     defineField({ name: "owner", title: "Left Column: Owner Photo & Creds", type: "ownerProfile" }),
-    defineField({ name: "meetNick", title: "Right Column: Meet the Owner", type: "meetNickSection" }),
+    defineField({ name: "storySection", title: "Right Column: Story", type: "storySection" }),
     defineField({ name: "certifications", title: "Certification Logos", type: "certificationsSection" }),
     defineField({ name: "cta", title: "Footer CTA", type: "ctaSection" }),
   ],

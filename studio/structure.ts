@@ -4,7 +4,7 @@ const singletonItems = [
   { id: "siteSettings", title: "Site Settings", schemaType: "siteSettings" },
   { href: "/", id: "homePage", title: "Home", schemaType: "homePage" },
   { href: "/about", id: "aboutPage", title: "About", schemaType: "aboutPage" },
-  { href: "/services", id: "servicesPage", title: "Services", schemaType: "servicesPage" },
+  { href: "/services", id: "servicesPage", title: "Menu", schemaType: "servicesPage" },
   { href: "/contact", id: "contactPage", title: "Contact", schemaType: "contactPage" },
 ];
 
@@ -31,7 +31,7 @@ export const structure: StructureResolver = async (S, context) => {
   const navigationLabels = await loadNavigationLabels(context);
 
   return S.list()
-    .title("Tri-State Content")
+    .title("Gio's Pickles Content")
     .items(
       singletonItems.map((item) => {
         const title = ("href" in item && navigationLabels.get(item.href)) || item.title;

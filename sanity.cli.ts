@@ -3,7 +3,7 @@ import path from "path";
 
 export default defineCliConfig({
   api: {
-    projectId: process.env.SANITY_STUDIO_PROJECT_ID || "34ie0b8l",
+    projectId: process.env.SANITY_STUDIO_PROJECT_ID || "demo",
     dataset: process.env.SANITY_STUDIO_DATASET || "production",
   },
   vite: {

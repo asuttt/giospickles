@@ -219,8 +219,8 @@ export const sharedObjects = [
     ],
   }),
   defineType({
-    name: "meetNickSection",
-    title: "Meet Nick Section",
+    name: "storySection",
+    title: "Story Section",
     type: "object",
     fields: [
       defineField({ name: "eyebrow", title: "Eyebrow", type: "string" }),

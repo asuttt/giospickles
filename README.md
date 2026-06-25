@@ -1,6 +1,6 @@
-# Tri-State Bookkeeping
+# Giovanni's DILLicious Pickles
 
-Responsive marketing website and Sanity CMS dashboard for Tri-State Bookkeeping
+Responsive marketing website and dormant Sanity CMS scaffold for Giovanni's DILLicious Pickles in New Hope, PA
 
 ## Stack
 
@@ -14,7 +14,7 @@ Responsive marketing website and Sanity CMS dashboard for Tri-State Bookkeeping
 
 - Home
 - About
-- Services
+- Menu
 - Contact
 
 ## CMS Structure
@@ -24,7 +24,7 @@ Sanity Studio is organized as singleton documents:
 - Site Settings
 - Home
 - About
-- Services
+- Menu
 - Contact
 
 Studio starter content lives in:
@@ -37,20 +37,20 @@ The Studio schemas live in `studio/schemaTypes`, and each singleton document is 
 
 ## Environment
 
-Sanity is configured for project `34ie0b8l` and defaults to the `production` dataset
+Sanity is dormant for this demo. Add project settings only when CMS wiring is ready.
 
 Optional overrides:
 
 ```sh
-SANITY_STUDIO_PROJECT_ID=34ie0b8l
+SANITY_STUDIO_PROJECT_ID=your-sanity-project-id
 SANITY_STUDIO_DATASET=production
-VITE_SANITY_PROJECT_ID=34ie0b8l
+VITE_SANITY_PROJECT_ID=your-sanity-project-id
 VITE_SANITY_DATASET=production
 VITE_SANITY_API_VERSION=2026-02-23
 VITE_FORMSPREE_FORM_ID=your-form-id
 ```
 
-The public site pulls from Sanity. Missing singleton documents are treated as errors so CMS wiring issues are visible during development
+The public site currently uses the code-owned demo content. The CMS scaffold is retained for future wiring
 
 Formspree delivery can be configured in Studio. Without a Formspree endpoint or form ID, submissions fall back to a mailto link
 

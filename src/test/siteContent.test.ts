@@ -16,7 +16,7 @@ describe("site content scaffold", () => {
 
   it("keeps the singleton page documents populated", () => {
     expect(pageContent.homePage.hero.heading).toBeTruthy();
-    expect(pageContent.aboutPage.meetNick.cards).toHaveLength(3);
+    expect(pageContent.aboutPage.storySection.cards).toHaveLength(3);
     expect(pageContent.servicesPage.faqSection.items).toHaveLength(6);
     expect(pageContent.contactPage.form.messagePlaceholders.length).toBeGreaterThan(1);
   });
