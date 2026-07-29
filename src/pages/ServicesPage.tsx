@@ -70,7 +70,7 @@ export default function ServicesPage() {
         <div className="site-container menu-board-intro-grid">
           <div>
             <p className="eyebrow">Gio's menu</p>
-            <h1>Pickle sandwiches, boats & bites</h1>
+            <h1>Sandwiches, boats, & bites</h1>
           </div>
           <nav className="menu-jump-list" aria-label="Menu sections">
             {menuAnchors.map((item) => (
@@ -119,9 +119,16 @@ export default function ServicesPage() {
               <article className="flavor-chip-group" key={category.title}>
                 <h3>{category.title}</h3>
                 <p>{category.note}</p>
-                <div>
-                  {category.flavors.map((flavor) => (
-                    <span key={flavor}>{flavor}</span>
+                <div className="flavor-chip-groups">
+                  {category.groups.map((group, groupIndex) => (
+                    <div className="flavor-chip-cluster" key={group.label ?? groupIndex}>
+                      {group.label && <h4>{group.label}</h4>}
+                      <div>
+                        {group.flavors.map((flavor) => (
+                          <span key={flavor}>{flavor}</span>
+                        ))}
+                      </div>
+                    </div>
                   ))}
                 </div>
               </article>

@@ -15,10 +15,39 @@ export const business = {
 };
 
 export const menuCategories = [
-  { title: "The Classics", note: "Crunchy, briny, no-nonsense favorites", flavors: ["Classic Dill", "Garlic Dill", "Kosher Dill", "Half Sour"] },
-  { title: "Bring the Heat", note: "For people who ask for extra peppers", flavors: ["Hot Dill", "Sriracha Garlic", "Jalapeño", "Sweet Heat"] },
-  { title: "Sweet Things", note: "A little tang, a little sugar, a lot of snackability", flavors: ["Bread & Butter", "Sweet Gherkins", "Maple Bourbon", "Candied Jalapeño"] },
-  { title: "Gio's Wild Cards", note: "Small-batch, seasonal, and delightfully strange", flavors: ["Pickle Chips", "Dilly Beans", "Pickled Carrots", "Ask What's New"] },
+  {
+    title: "The Classics",
+    note: "The original twelve, from bread & butter to dill relish",
+    groups: [{ flavors: ["Bread & Butter", "Dill", "Garlic", "Gherkin", "Hamburger", "Old Bay", "Everything Bagel", "Bloody Mary", "Sweet Horseradish", "Full Sour", "Half Sour", "Dill Relish"] }],
+  },
+  {
+    title: "Candy Collection",
+    note: "Sweet, nostalgic flavors with a pickle-shop twist",
+    groups: [
+      { label: "Standalone Sweets", flavors: ["Cotton Candy", "Butterscotch"] },
+      { label: "Jolly Rancher", flavors: ["Watermelon", "Green Apple", "Cherry", "Blue Raspberry", "Grape"] },
+    ],
+  },
+  {
+    title: "Pickled Veggies",
+    note: "Classic vegetables, plus garlic, spicy, and everything variations",
+    groups: [
+      { label: "Tomatoes", flavors: ["Plain", "Garlic", "Spicy", "Spicy Garlic", "Everything"] },
+      { label: "Mushrooms", flavors: ["Plain", "Garlic", "Spicy"] },
+      { label: "Olives", flavors: ["Plain", "Garlic", "Spicy", "Everything"] },
+      { label: "Other Veggies", flavors: ["Carrots", "Cauliflower", "Beets", "Banana Peppers", "TBD #13", "Pepperoncini", "Sweet Relish"] },
+    ],
+  },
+  {
+    title: "Fresh From The Patch",
+    note: "Fruit-forward flavors with a bright, fresh crunch",
+    groups: [{ flavors: ["Cherry", "Blueberry", "Blackberry", "Mango", "Pineapple", "Peach", "Strawberry", "TBD #8"] }],
+  },
+  {
+    title: "Bring The Heat",
+    note: "Bold, spicy flavors for people who like extra kick",
+    groups: [{ flavors: ["Garlic Hot", "Spicy Dill", "Spicy Everything", "Spicy Bread & Butter", "Reaper", "Reaper Bread & Butter", "Jalapeños"] }],
+  },
 ];
 
 export const sandwiches = [
